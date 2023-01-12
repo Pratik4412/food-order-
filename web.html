@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOnlinefood.com</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap">
+</head>
+
+<body class="rong">
+    <nav id="navbar">
+        <div class="logo">
+            <img src="./dominos logo.png" alt="orderOnlinefood.com">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+
+    </nav>
+    <section id="home">
+        <h1 class="heding"> Wel-come To My Online food Store</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, doloremque. Quis illo
+            quibusdam doloribus excepturi ea facilis nesciunt aperiam tempora esse autem beatae nisi non </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button id="btn">Order now</button>
+    </section>
+    <section class="services">
+        <h1 class="heding-outer">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="./f1.png" alt="">
+                <h2 class="heding1"> Food Catering</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, cupiditate quibusdam? Eveniet eaque
+                    cupiditate,
+                    officia, atque veniam ullam voluptatum ex inventore, consectetur culpa nostrum praesentium.
+                    Expedita reprehenderit nobis quae laboriosam!</p>
+            </div>
+            <div class="box">
+                <img src="./f3.png" alt="">
+                <h2 class="heding1"> bulk Ordering</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, cupiditate quibusdam? Eveniet eaque
+                    cupiditate,
+                    officia, atque veniam ullam voluptatum ex inventore, consectetur culpa nostrum praesentium.
+                    Expedita reprehenderit nobis quae laboriosam!</p>
+            </div>
+            <div class="box">
+                <img src="./f2-removebg-preview.png" alt="">
+                <h2 class="heding1"> Food Ordering</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, cupiditate quibusdam? Eveniet eaque
+                    cupiditate,
+                    officia, atque veniam ullam voluptatum ex inventore, consectetur culpa nostrum praesentium.
+                    Expedita reprehenderit nobis quae laboriosam!</p>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="client-section">
+        <h1 class="h-primarys">Our Client</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="./android.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="./apple.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="./ios-removebg-preview.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="./microsoft.png" alt="">
+            </div>
+        </div><br><br><br><br>
+        <h1 class="h-primarys">Contact us</h1>
+        <div class="contact-box">
+            <form name="google-sheet">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter @email.com">
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Phone no: </label>
+                    <input type="number" name="tel" id="Phone" placeholder="Enter phone no.">
+                </div>
+                <div class="form-group">
+                    <label for="messege">Messege: </label>
+                    <textarea name="messege" id="messege" cols="20" rows="10"></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="" id="sub">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="fo">
+            Thaks for using this sit MyOnlinefood.com
+        </div>
+
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwin61v-1iDCpTQ3pNCMNHlIrX17U_oTLr0O28zuQFE6wkAJQl_MhjDa5nlPm2lNRvsTg/exec'
+        const form = document.forms['google-sheet']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
